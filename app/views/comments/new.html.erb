@@ -1,0 +1,7 @@
+<h1>Bid On <%= @post.title %></h1>
+
+<%= form_for([@post, @comments]) do |f| %>
+    <%= f.label :description %><br>
+    <%= f.text_field :description%>
+    <%= f.submit :class=>"btn btn-success" %>
+<% end %>

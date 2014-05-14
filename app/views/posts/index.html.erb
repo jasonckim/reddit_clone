@@ -1,0 +1,13 @@
+<h1>Welcome to (fake) reddit</h1>
+
+<p>Here are your current posts:</p>
+
+<% @posts.each do |posts| %>
+	<li>
+		<%= link_to posts.title, post_comments_path(@posts) %>
+	</li>
+	<% end %>
+
+<br />
+
+	<%= link_to "Post something new", new_post_path %>
